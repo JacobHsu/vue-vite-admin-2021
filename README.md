@@ -9,8 +9,13 @@ This template should help get you started developing with Vue 3 and Typescript i
 ## Project Setup
 
 `$ yarn add eslint eslint-plugin-vue eslint-define-config -D`  
+`$ yarn add prettier eslint-plugin-prettier -D`  
 `eslint`: ESLint 本體  
 `eslint-plugin-vue`: 提供 Vue Style Guide  
+`prettier`: Prettier 本體  
+`eslint-plugin-prettier`: 整合 ESLint 與 Prettier 的規則  
+
+`CTRL + SHIFT + F`  
 
 ## Recommended IDE Setup
 
