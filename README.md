@@ -1,7 +1,16 @@
 # Vue 3 + Typescript + Vite
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+This template should help get you started developing with Vue 3 and Typescript in Vite.  
 `yarn create vite vue-vite-admin --template vue-ts`
+
+[Vben Admin](https://anncwb.github.io/vue-vben-admin-doc/) 一个开箱即用的前端框架  
+[vue-vben-admin-thin](https://github.com/anncwb/vben-admin-thin-next)  
+
+## Project Setup
+
+`$ yarn add eslint eslint-plugin-vue eslint-define-config -D`  
+`eslint`: ESLint 本體  
+`eslint-plugin-vue`: 提供 Vue Style Guide  
 
 ## Recommended IDE Setup
 
