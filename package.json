@@ -10,8 +10,11 @@
     "vue": "^3.0.5"
   },
   "devDependencies": {
+    "@types/node": "^16.4.3",
     "@vitejs/plugin-vue": "^1.2.5",
+    "@vitejs/plugin-vue-jsx": "^1.1.6",
     "@vue/compiler-sfc": "^3.0.5",
+    "dotenv": "^10.0.0",
     "eslint": "^7.31.0",
     "eslint-define-config": "^1.0.9",
     "eslint-plugin-prettier": "^3.4.0",
