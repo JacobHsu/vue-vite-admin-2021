@@ -8,11 +8,14 @@
   },
   "dependencies": {
     "ant-design-vue": "^2.2.2",
+    "crypto-js": "^4.1.1",
     "pinia": "^2.0.0-beta.5",
     "vue": "^3.0.5",
     "vue-router": "^4.0.10"
   },
   "devDependencies": {
+    "@types/crypto-js": "^4.0.2",
+    "@types/lodash-es": "^4.17.4",
     "@types/node": "^16.4.3",
     "@vitejs/plugin-vue": "^1.2.5",
     "@vitejs/plugin-vue-jsx": "^1.1.6",
@@ -26,6 +29,7 @@
     "typescript": "^4.3.2",
     "vite": "^2.4.3",
     "vite-plugin-html": "^2.0.7",
+    "vite-plugin-theme": "^0.8.1",
     "vue-tsc": "^0.0.24"
   }
 }
