@@ -1,6 +1,7 @@
 import type { AppRouteRecordRaw, AppRouteModule } from '/@/router/types';
-// import { PageEnum } from '/@/enums/pageEnum';
-import HelloWorld from '/@/components/HelloWorld.vue';
+import { PageEnum } from '/@/enums/pageEnum';
+
+import { mainOutRoutes } from './mainOut';
 
 const modules = import.meta.globEager('./modules/**/*.ts');
 
@@ -12,15 +13,16 @@ Object.keys(modules).forEach((key) => {
   routeModuleList.push(...modList);
 });
 
+export const asyncRoutes = [...routeModuleList];
+
 export const RootRoute: AppRouteRecordRaw = {
   path: '/',
   name: 'Root',
-  // redirect: PageEnum.BASE_HOME,
-  component: HelloWorld,
+  redirect: PageEnum.BASE_HOME,
   meta: {
     title: 'Root',
   },
 };
 
 // Basic routing without permission
-export const basicRoutes = [RootRoute];
+export const basicRoutes = [RootRoute, ...mainOutRoutes, ...asyncRoutes];

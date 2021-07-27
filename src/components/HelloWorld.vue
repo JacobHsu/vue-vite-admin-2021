@@ -40,8 +40,7 @@ export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: {
-      type: String,
-      required: true
+      type: String
     }
   },
   setup: () => {
