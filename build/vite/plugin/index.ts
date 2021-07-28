@@ -5,6 +5,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 
 import { configHtmlPlugin } from './html';
 import { configThemePlugin } from './theme';
+import { configImageminPlugin } from './imagemin';
 
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
   const {
