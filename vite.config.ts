@@ -25,6 +25,10 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     base: VITE_PUBLIC_PATH,
     resolve: {
       alias: [
+        {
+          find: 'vue-i18n',
+          replacement: 'vue-i18n/dist/vue-i18n.cjs.js',
+        },
         // /@/xxxx => src/xxxx
         {
           find: /\/@\//,
