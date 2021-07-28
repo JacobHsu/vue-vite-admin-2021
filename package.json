@@ -21,6 +21,7 @@
     "@vitejs/plugin-vue": "^1.2.5",
     "@vitejs/plugin-vue-jsx": "^1.1.6",
     "@vue/compiler-sfc": "^3.0.5",
+    "commitizen": "^4.2.4",
     "dotenv": "^10.0.0",
     "eslint": "^7.31.0",
     "eslint-define-config": "^1.0.9",
@@ -32,5 +33,6 @@
     "vite-plugin-html": "^2.0.7",
     "vite-plugin-theme": "^0.8.1",
     "vue-tsc": "^0.0.24"
-  }
+  },
+  "license": "MIT"
 }
