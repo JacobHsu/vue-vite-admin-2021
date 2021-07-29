@@ -1,3 +1,4 @@
+import '/@/design/index.less';
 import App from './App.vue';
 import { createApp } from 'vue';
 import { initAppConfigStore } from '/@/logics/initAppConfig';

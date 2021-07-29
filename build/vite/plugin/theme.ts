@@ -12,7 +12,7 @@ import {
   tinycolor,
 } from 'vite-plugin-theme';
 import { getThemeColors, generateColors } from '../../config/themeConfig';
-// import { generateModifyVars } from '../../generate/generateModifyVars';
+import { generateModifyVars } from '../../generate/generateModifyVars';
 
 export function configThemePlugin(isBuild: boolean): Plugin[] {
   const colors = generateColors({
@@ -46,7 +46,7 @@ export function configThemePlugin(isBuild: boolean): Plugin[] {
       filter: (id) => (isBuild ? !id.endsWith('antd.less') : true),
       // extractCss: false,
       darkModifyVars: {
-        // ...generateModifyVars(true),
+        ...generateModifyVars(true),
         'text-color': '#c9d1d9',
         'text-color-base': '#c9d1d9',
         'component-background': '#151515',

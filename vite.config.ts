@@ -1,6 +1,7 @@
 import type { UserConfig, ConfigEnv } from 'vite';
 import { loadEnv } from 'vite';
 import { resolve } from 'path';
+import { generateModifyVars } from './build/generate/generateModifyVars';
 import { createProxy } from './build/vite/proxy';
 import { wrapperEnv } from './build/utils';
 import { createVitePlugins } from './build/vite/plugin';
@@ -76,6 +77,15 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       // Suppress warning
       __INTLIFY_PROD_DEVTOOLS__: false,
       __APP_INFO__: JSON.stringify(__APP_INFO__),
+    },
+
+    css: {
+      preprocessorOptions: {
+        less: {
+          modifyVars: generateModifyVars(),
+          javascriptEnabled: true,
+        },
+      },
     },
 
     // The vite plugin used by the project. The quantity is large, so it is separately extracted and managed
