@@ -6,7 +6,7 @@ import type { Plugin } from 'vite';
 import path from 'path';
 import {
   viteThemePlugin,
-  // antdDarkThemePlugin,
+  antdDarkThemePlugin,
   mixLighten,
   mixDarken,
   tinycolor,
@@ -38,27 +38,27 @@ export function configThemePlugin(isBuild: boolean): Plugin[] {
       },
       colorVariables: [...getThemeColors(), ...colors],
     }),
-    // antdDarkThemePlugin({
-    //   preloadFiles: [
-    //     path.resolve(process.cwd(), 'node_modules/ant-design-vue/dist/antd.less'),
-    //     path.resolve(process.cwd(), 'src/design/index.less'),
-    //   ],
-    //   filter: (id) => (isBuild ? !id.endsWith('antd.less') : true),
-    //   // extractCss: false,
-    //   darkModifyVars: {
-    //     // ...generateModifyVars(true),
-    //     'text-color': '#c9d1d9',
-    //     'text-color-base': '#c9d1d9',
-    //     'component-background': '#151515',
-    //     // black: '#0e1117',
-    //     // #8b949e
-    //     'text-color-secondary': '#8b949e',
-    //     'border-color-base': '#303030',
-    //     // 'border-color-split': '#30363d',
-    //     'item-active-bg': '#111b26',
-    //     'app-content-background': 'rgb(255 255 255 / 4%)',
-    //   },
-    // }),
+    antdDarkThemePlugin({
+      preloadFiles: [
+        path.resolve(process.cwd(), 'node_modules/ant-design-vue/dist/antd.less'),
+        path.resolve(process.cwd(), 'src/design/index.less'),
+      ],
+      filter: (id) => (isBuild ? !id.endsWith('antd.less') : true),
+      // extractCss: false,
+      darkModifyVars: {
+        // ...generateModifyVars(true),
+        'text-color': '#c9d1d9',
+        'text-color-base': '#c9d1d9',
+        'component-background': '#151515',
+        // black: '#0e1117',
+        // #8b949e
+        'text-color-secondary': '#8b949e',
+        'border-color-base': '#303030',
+        // 'border-color-split': '#30363d',
+        'item-active-bg': '#111b26',
+        'app-content-background': 'rgb(255 255 255 / 4%)',
+      },
+    }),
   ];
 
   return plugin as unknown as Plugin[];
