@@ -6,6 +6,7 @@ import { setupErrorHandle } from '/@/logics/error-handle';
 import { setupRouter } from '/@/router';
 import { setupStore } from '/@/store';
 import { setupI18n } from '/@/locales/setupI18n';
+import { registerGlobComp } from '/@/components/registerGlobComp';
 
 async function bootstrap() {
   const app = createApp(App);
@@ -15,6 +16,9 @@ async function bootstrap() {
 
   // Initialize internal system configuration
   initAppConfigStore();
+
+  // Register global components
+  registerGlobComp(app);
 
   // Multilingual configuration
   await setupI18n(app);

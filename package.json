@@ -16,6 +16,7 @@
     "vue-router": "^4.0.10"
   },
   "devDependencies": {
+    "@purge-icons/generated": "^0.7.0",
     "@types/crypto-js": "^4.0.2",
     "@types/lodash-es": "^4.17.4",
     "@types/node": "^16.4.3",
