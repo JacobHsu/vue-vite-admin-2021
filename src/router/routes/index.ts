@@ -1,4 +1,5 @@
 import type { AppRouteRecordRaw, AppRouteModule } from '/@/router/types';
+import { PAGE_NOT_FOUND_ROUTE } from '/@/router/routes/basic';
 import { PageEnum } from '/@/enums/pageEnum';
 
 import { mainOutRoutes } from './mainOut';
@@ -13,7 +14,7 @@ Object.keys(modules).forEach((key) => {
   routeModuleList.push(...modList);
 });
 
-export const asyncRoutes = [...routeModuleList];
+export const asyncRoutes = [PAGE_NOT_FOUND_ROUTE, ...routeModuleList];
 
 export const RootRoute: AppRouteRecordRaw = {
   path: '/',
@@ -25,4 +26,4 @@ export const RootRoute: AppRouteRecordRaw = {
 };
 
 // Basic routing without permission
-export const basicRoutes = [RootRoute, ...mainOutRoutes, ...asyncRoutes];
+export const basicRoutes = [RootRoute, ...mainOutRoutes, PAGE_NOT_FOUND_ROUTE]; // ...asyncRoutes, 

@@ -8,6 +8,14 @@ import { setupStore } from '/@/store';
 import { setupI18n } from '/@/locales/setupI18n';
 import { registerGlobComp } from '/@/components/registerGlobComp';
 
+// Do not introduce on-demand in local development?
+// In the local development for introduce on-demand, the number of browser requests will increase by about 20%.
+// Which may slow down the browser refresh.
+// Therefore, all are introduced in local development, and only introduced on demand in the production environment
+// if (import.meta.env.DEV) {
+//   import('ant-design-vue/dist/antd.less');
+// }
+
 async function bootstrap() {
   const app = createApp(App);
 
