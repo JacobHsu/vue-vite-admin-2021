@@ -31,45 +31,45 @@ export const PAGE_NOT_FOUND_ROUTE: AppRouteRecordRaw = {
   // ],
 };
 
-export const REDIRECT_ROUTE: AppRouteRecordRaw = {
-  path: '/redirect',
-  name: REDIRECT_NAME,
-  component: LAYOUT,
-  meta: {
-    title: REDIRECT_NAME,
-    hideBreadcrumb: true,
-    hideMenu: true,
-  },
-  children: [
-    {
-      path: '/redirect/:path(.*)',
-      name: REDIRECT_NAME,
-      component: () => import('/@/views/sys/redirect/index.vue'),
-      meta: {
-        title: REDIRECT_NAME,
-        hideBreadcrumb: true,
-      },
-    },
-  ],
-};
+// export const REDIRECT_ROUTE: AppRouteRecordRaw = {
+//   path: '/redirect',
+//   name: REDIRECT_NAME,
+//   component: LAYOUT,
+//   meta: {
+//     title: REDIRECT_NAME,
+//     hideBreadcrumb: true,
+//     hideMenu: true,
+//   },
+//   children: [
+//     {
+//       path: '/redirect/:path(.*)',
+//       name: REDIRECT_NAME,
+//       component: () => import('/@/views/sys/redirect/index.vue'),
+//       meta: {
+//         title: REDIRECT_NAME,
+//         hideBreadcrumb: true,
+//       },
+//     },
+//   ],
+// };
 
-export const ERROR_LOG_ROUTE: AppRouteRecordRaw = {
-  path: '/error-log',
-  name: 'ErrorLog',
-  component: LAYOUT,
-  meta: {
-    title: 'ErrorLog',
-    hideBreadcrumb: true,
-  },
-  children: [
-    {
-      path: 'list',
-      name: 'ErrorLogList',
-      component: () => import('/@/views/sys/error-log/index.vue'),
-      meta: {
-        title: t('routes.basic.errorLogList'),
-        hideBreadcrumb: true,
-      },
-    },
-  ],
-};
+// export const ERROR_LOG_ROUTE: AppRouteRecordRaw = {
+//   path: '/error-log',
+//   name: 'ErrorLog',
+//   component: LAYOUT,
+//   meta: {
+//     title: 'ErrorLog',
+//     hideBreadcrumb: true,
+//   },
+//   children: [
+//     {
+//       path: 'list',
+//       name: 'ErrorLogList',
+//       component: () => import('/@/views/sys/error-log/index.vue'),
+//       meta: {
+//         title: t('routes.basic.errorLogList'),
+//         hideBreadcrumb: true,
+//       },
+//     },
+//   ],
+// };
