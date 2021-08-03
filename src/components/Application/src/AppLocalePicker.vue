@@ -3,7 +3,8 @@
  * @Description: Multi-language switching component
 -->
 <template>
-  <Dropdown
+  <div>todo Dropdown Icon</div>
+  <!-- <Dropdown
     placement="bottomCenter"
     :trigger="['click']"
     :dropMenuList="localeList"
@@ -11,11 +12,11 @@
     @menuEvent="handleMenuEvent"
     overlayClassName="app-locale-picker-overlay"
   >
-    <span class="cursor-pointer flex items-center">
+    <span class="flex items-center cursor-pointer">
       <Icon icon="ion:language" />
       <span v-if="showText" class="ml-1">{{ getLocaleText }}</span>
     </span>
-  </Dropdown>
+  </Dropdown> -->
 </template>
 <script lang="ts">
   import type { LocaleType } from '/#/config';
@@ -39,7 +40,7 @@
 
   export default defineComponent({
     name: 'AppLocalPicker',
-    components: { Dropdown, Icon },
+    // components: { Dropdown, Icon }, // 
     props,
     setup(props) {
       const selectedKeys = ref<string[]>([]);
