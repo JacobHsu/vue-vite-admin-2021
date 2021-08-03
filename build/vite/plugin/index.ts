@@ -5,7 +5,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 
 import { configHtmlPlugin } from './html';
 import { configThemePlugin } from './theme';
-import { configImageminPlugin } from './imagemin';
+import { configSvgIconsPlugin } from './svgSprite';
 
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
   const {
@@ -25,6 +25,9 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
 
   // vite-plugin-html
   vitePlugins.push(configHtmlPlugin(viteEnv, isBuild));
+
+  // vite-plugin-svg-icons
+  vitePlugins.push(configSvgIconsPlugin(isBuild));
 
   //vite-plugin-theme
   vitePlugins.push(configThemePlugin(isBuild));
