@@ -66,7 +66,7 @@
     components: {
       AppLogo,
       LoginForm,
-      // ForgetPasswordForm,
+      ForgetPasswordForm,
       // RegisterForm,
       // MobileForm,
       // QrCodeForm,
