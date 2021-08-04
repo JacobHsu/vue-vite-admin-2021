@@ -67,7 +67,7 @@
       AppLogo,
       LoginForm,
       ForgetPasswordForm,
-      // RegisterForm,
+      RegisterForm,
       // MobileForm,
       // QrCodeForm,
       AppLocalePicker,

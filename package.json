@@ -8,11 +8,13 @@
   },
   "dependencies": {
     "@vueuse/core": "^5.2.0",
+    "@zxcvbn-ts/core": "^1.0.0-beta.0",
     "ant-design-vue": "^2.2.2",
     "axios": "^0.21.1",
     "crypto-js": "^4.1.1",
     "http-server": "^0.12.3",
     "pinia": "^2.0.0-beta.5",
+    "resize-observer-polyfill": "^1.5.1",
     "vue": "^3.0.5",
     "vue-i18n": "^9.1.7",
     "vue-router": "^4.0.10"
