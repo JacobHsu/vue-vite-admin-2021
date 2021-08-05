@@ -12,9 +12,13 @@
   import { createAsyncComponent } from '/@/utils/factory/createAsyncComponent';
 
   import LayoutHeader from './header/index.vue';
-
+  import { useHeaderSetting } from '/@/hooks/setting/useHeaderSetting';
+  import { useMenuSetting } from '/@/hooks/setting/useMenuSetting';
   import { useDesign } from '/@/hooks/web/useDesign';
   import { useLockPage } from '/@/hooks/web/useLockPage';
+
+  import { useAppInject } from '/@/hooks/web/useAppInject';
+
   export default defineComponent({
     name: 'DefaultLayout',
     components: {
@@ -22,14 +26,30 @@
       LayoutHeader,
       Layout,
     },
-    setup: () => {
+    setup() {
       const { prefixCls } = useDesign('default-layout');
+      const { getIsMobile } = useAppInject();
+      const { getShowFullHeaderRef } = useHeaderSetting();
+      const { getShowSidebar, getIsMixSidebar, getShowMenu } = useMenuSetting();
 
       // Create a lock screen monitor
       const lockEvents = useLockPage();
 
+      const layoutClass = computed(() => {
+        let cls: string[] = ['ant-layout'];
+        if (unref(getIsMixSidebar) || unref(getShowMenu)) {
+          cls.push('ant-layout-has-sider');
+        }
+        return cls;
+      });
+
       return {
+        getShowFullHeaderRef,
+        getShowSidebar,
         prefixCls,
+        getIsMobile,
+        getIsMixSidebar,
+        layoutClass,
         lockEvents,
       };
     },

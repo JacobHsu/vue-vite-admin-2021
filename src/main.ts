@@ -38,7 +38,7 @@ async function bootstrap() {
   setupRouter(app);
 
   // router-guard
-  // setupRouterGuard(router);
+  setupRouterGuard(router);
 
   // Configure global error handling
   setupErrorHandle(app);
