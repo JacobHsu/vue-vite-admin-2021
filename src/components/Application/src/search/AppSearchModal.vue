@@ -61,7 +61,7 @@
   import { SearchOutlined } from '@ant-design/icons-vue';
   import AppSearchFooter from './AppSearchFooter.vue';
   import Icon from '/@/components/Icon';
-  // import clickOutside from '/@/directives/clickOutside';
+  import clickOutside from '/@/directives/clickOutside';
   import { useDesign } from '/@/hooks/web/useDesign';
   import { useRefs } from '/@/hooks/core/useRefs';
   import { useMenuSearch } from './useMenuSearch';
@@ -75,9 +75,9 @@
   export default defineComponent({
     name: 'AppSearchModal',
     components: { Icon, SearchOutlined, AppSearchFooter },
-    // directives: {
-    //   clickOutside,
-    // },
+    directives: {
+      clickOutside,
+    },
     props,
     emits: ['close'],
     setup(props, { emit }) {
