@@ -1,6 +1,6 @@
 import type { Menu } from '/@/router/types';
 import { ref, onBeforeMount, unref, Ref, nextTick } from 'vue';
-// import { getMenus } from '/@/router/menus';
+import { getMenus } from '/@/router/menus';
 import { cloneDeep } from 'lodash-es';
 import { filter, forEach } from '/@/utils/helper/treeHelper';
 import { useGo } from '/@/hooks/web/usePage';
@@ -38,11 +38,11 @@ export function useMenuSearch(refs: Ref<HTMLElement[]>, scrollWrap: Ref<ElRef>, 
   const handleSearch = useDebounceFn(search, 200);
 
   onBeforeMount(async () => {
-    // const list = await getMenus();
-    // menuList = cloneDeep(list);
-    // forEach(menuList, (item) => {
-    //   item.name = t(item.name);
-    // });
+    const list = await getMenus();
+    menuList = cloneDeep(list);
+    forEach(menuList, (item) => {
+      item.name = t(item.name);
+    });
   });
 
   function search(e: ChangeEvent) {
