@@ -54,8 +54,8 @@
 <template>
   <LayoutLockPage />
   <BackTop v-if="getUseOpenBackTop" :target="getTarget" />
-  <!-- <SettingDrawer v-if="getIsFixedSettingDrawer" :class="prefixCls" />
-  <SessionTimeoutLogin v-if="getIsSessionTimeout" /> -->
+  <!-- <SettingDrawer v-if="getIsFixedSettingDrawer" :class="prefixCls" /> -->
+  <SessionTimeoutLogin v-if="getIsSessionTimeout" />
 </template>
 
 <style lang="less">
