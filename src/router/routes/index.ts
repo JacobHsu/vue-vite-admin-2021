@@ -1,7 +1,7 @@
 import type { AppRouteRecordRaw, AppRouteModule } from '/@/router/types';
 import { PAGE_NOT_FOUND_ROUTE } from '/@/router/routes/basic';
 import { PageEnum } from '/@/enums/pageEnum';
-
+import { t } from '/@/hooks/web/useI18n';
 import { mainOutRoutes } from './mainOut';
 
 const modules = import.meta.globEager('./modules/**/*.ts');
@@ -25,5 +25,14 @@ export const RootRoute: AppRouteRecordRaw = {
   },
 };
 
+export const LoginRoute: AppRouteRecordRaw = {
+  path: '/login',
+  name: 'Login',
+  component: () => import('/@/views/sys/login/Login.vue'),
+  meta: {
+    title: t('routes.basic.login'),
+  },
+};
+
 // Basic routing without permission
-export const basicRoutes = [RootRoute, ...mainOutRoutes, PAGE_NOT_FOUND_ROUTE]; // ...asyncRoutes, 
+export const basicRoutes = [RootRoute, LoginRoute, ...mainOutRoutes, PAGE_NOT_FOUND_ROUTE]; // ...asyncRoutes,

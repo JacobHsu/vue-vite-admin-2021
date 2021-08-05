@@ -7,7 +7,7 @@ import { Modal, notification } from 'ant-design-vue';
 import { warn } from '/@/utils/log';
 import { unref } from 'vue';
 import { setRouteChange } from '/@/logics/mitt/routeChange';
-// import { createPermissionGuard } from './permissionGuard';
+import { createPermissionGuard } from './permissionGuard';
 // import { createStateGuard } from './stateGuard';
 import nProgress from 'nprogress';
 import projectSetting from '/@/settings/projectSetting';
@@ -21,7 +21,7 @@ export function setupRouterGuard(router: Router) {
   createScrollGuard(router);
   createMessageGuard(router);
   createProgressGuard(router);
-  // createPermissionGuard(router);
+  createPermissionGuard(router);
   // createParamMenuGuard(router); // must after createPermissionGuard (menu has been built.)
   // createStateGuard(router);
 }
