@@ -4,6 +4,7 @@ import { createApp } from 'vue';
 import { initAppConfigStore } from '/@/logics/initAppConfig';
 import { setupErrorHandle } from '/@/logics/error-handle';
 import { router, setupRouter } from '/@/router';
+import { setupRouterGuard } from '/@/router/guard';
 import { setupStore } from '/@/store';
 import { setupI18n } from '/@/locales/setupI18n';
 import { registerGlobComp } from '/@/components/registerGlobComp';
@@ -33,6 +34,9 @@ async function bootstrap() {
 
   // Configure routing
   setupRouter(app);
+
+  // router-guard
+  setupRouterGuard(router);
 
   // Configure global error handling
   setupErrorHandle(app);
