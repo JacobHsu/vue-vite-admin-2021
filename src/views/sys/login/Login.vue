@@ -1,10 +1,10 @@
 <template>
   <div :class="prefixCls" class="relative w-full h-full px-4">
-    <!-- <AppLocalePicker
+    <AppLocalePicker
       class="absolute text-white top-4 right-4 enter-x xl:text-gray-600"
       :showText="false"
       v-if="!sessionTimeout && showLocale"
-    /> -->
+    />
     <!-- <AppDarkModeToggle class="absolute top-3 right-7 enter-x" v-if="!sessionTimeout" />
 
     <span class="-enter-x xl:hidden">
