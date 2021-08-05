@@ -9,7 +9,7 @@ import { unref } from 'vue';
 import { setRouteChange } from '/@/logics/mitt/routeChange';
 // import { createPermissionGuard } from './permissionGuard';
 // import { createStateGuard } from './stateGuard';
-// import nProgress from 'nprogress';
+import nProgress from 'nprogress';
 import projectSetting from '/@/settings/projectSetting';
 // import { createParamMenuGuard } from './paramMenuGuard';
 
@@ -20,7 +20,7 @@ export function setupRouterGuard(router: Router) {
   createHttpGuard(router);
   createScrollGuard(router);
   createMessageGuard(router);
-  // createProgressGuard(router);
+  createProgressGuard(router);
   // createPermissionGuard(router);
   // createParamMenuGuard(router); // must after createPermissionGuard (menu has been built.)
   // createStateGuard(router);
