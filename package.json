@@ -4,7 +4,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "clean:lib": "rimraf node_modules",
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "dependencies": {
     "@iconify/iconify": "^2.0.3",
@@ -38,15 +40,18 @@
     "@vue/compiler-sfc": "^3.0.5",
     "autoprefixer": "^10.3.1",
     "commitizen": "^4.2.4",
+    "conventional-changelog-cli": "^2.1.1",
     "dotenv": "^10.0.0",
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-define-config": "^1.0.9",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.14.0",
+    "global": "^4.4.0",
     "less": "^4.1.1",
     "postcss": "^8.3.6",
     "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
