@@ -3,6 +3,8 @@ import type { Plugin } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 
+import purgeIcons from 'vite-plugin-purge-icons';
+
 import { configHtmlPlugin } from './html';
 import { configThemePlugin } from './theme';
 import { configSvgIconsPlugin } from './svgSprite';
@@ -28,6 +30,9 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
 
   // vite-plugin-svg-icons
   vitePlugins.push(configSvgIconsPlugin(isBuild));
+
+  // vite-plugin-purge-icons
+  vitePlugins.push(purgeIcons());
 
   //vite-plugin-theme
   vitePlugins.push(configThemePlugin(isBuild));

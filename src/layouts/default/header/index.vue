@@ -50,7 +50,7 @@
 
       <UserDropDown :theme="getHeaderTheme" />
 
-      <SettingDrawer v-if="getShowSetting" :class="`${prefixCls}-action__item`" />
+      <!-- <SettingDrawer v-if="getShowSetting" :class="`${prefixCls}-action__item`" /> -->
     </div>
   </Header>
 </template>
@@ -95,9 +95,9 @@
       Notify,
       AppSearch,
       ErrorAction,
-      SettingDrawer: createAsyncComponent(() => import('/@/layouts/default/setting/index.vue'), {
-        loading: true,
-      }),
+      // SettingDrawer: createAsyncComponent(() => import('/@/layouts/default/setting/index.vue'), {
+      //   loading: true,
+      // }),
     },
     props: {
       fixed: propTypes.bool,
