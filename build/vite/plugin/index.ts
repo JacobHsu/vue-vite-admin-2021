@@ -2,7 +2,7 @@ import type { Plugin } from 'vite';
 
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
-
+import legacy from '@vitejs/plugin-legacy';
 import purgeIcons from 'vite-plugin-purge-icons';
 
 import { configHtmlPlugin } from './html';
@@ -24,6 +24,9 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
     // have to
     vueJsx(),
   ];
+
+  // @vitejs/plugin-legacy
+  VITE_LEGACY && isBuild && vitePlugins.push(legacy());
 
   // vite-plugin-html
   vitePlugins.push(configHtmlPlugin(viteEnv, isBuild));

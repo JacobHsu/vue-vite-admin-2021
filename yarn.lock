@@ -345,6 +345,11 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/standalone@^7.14.9":
+  version "7.15.2"
+  resolved "https://registry.yarnpkg.com/@babel/standalone/-/standalone-7.15.2.tgz#d3c8779435b1c31fdebd052f03337deae17f19b1"
+  integrity sha512-q/DsJPZ2v0PjH4UL0DaEOCT/pERnXPsfERLbILXuzS8BWF6NuBAxJwf2/h/XiyJZZ4X/7BVrmoW6H7u3H6nDYQ==
+
 "@babel/template@^7.0.0", "@babel/template@^7.14.5":
   version "7.14.5"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.14.5.tgz#a9bc9d8b33354ff6e55a9c60d1109200a68974f4"
@@ -783,6 +788,17 @@
   dependencies:
     "@typescript-eslint/types" "4.29.0"
     eslint-visitor-keys "^2.0.0"
+
+"@vitejs/plugin-legacy@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@vitejs/plugin-legacy/-/plugin-legacy-1.5.1.tgz#fef2a11c05d83f5ab13d2d04e52d75bac13c6e6c"
+  integrity sha512-g+0iy0X3NJRUSKZK+OCeSxNWnCuuE/6lsmr2WLWPOEt1vp6LdfHuNCYRooCm6s0ccTZ/SiumVk8vt9DWSYs+8A==
+  dependencies:
+    "@babel/standalone" "^7.14.9"
+    core-js "^3.16.0"
+    magic-string "^0.25.7"
+    regenerator-runtime "^0.13.9"
+    systemjs "^6.10.2"
 
 "@vitejs/plugin-vue-jsx@^1.1.6":
   version "1.1.6"
@@ -1883,6 +1899,11 @@ core-js@^3.12.1:
   version "3.15.2"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.15.2.tgz#740660d2ff55ef34ce664d7e2455119c5bdd3d61"
   integrity sha512-tKs41J7NJVuaya8DxIOCnl8QuPHx5/ZVbFo1oKgVl1qHFBBrDctzQGtuLjPpRdNTWmKPH6oEvgN/MUID+l485Q==
+
+core-js@^3.16.0:
+  version "3.16.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.16.1.tgz#f4485ce5c9f3c6a7cb18fa80488e08d362097249"
+  integrity sha512-AAkP8i35EbefU+JddyWi12AWE9f2N/qr/pwnDtWz4nyUIBGMJPX99ANFFRSw6FefM374lDujdtLDyhN2A/btHw==
 
 core-util-is@~1.0.0:
   version "1.0.2"
@@ -4908,7 +4929,7 @@ reduce-css-calc@^2.1.8:
     css-unit-converter "^1.1.1"
     postcss-value-parser "^3.3.0"
 
-regenerator-runtime@^0.13.4:
+regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.9:
   version "0.13.9"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
   integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
@@ -5631,6 +5652,11 @@ svgo@^2.3.1:
     css-tree "^1.1.2"
     csso "^4.2.0"
     stable "^0.1.8"
+
+systemjs@^6.10.2:
+  version "6.10.2"
+  resolved "https://registry.yarnpkg.com/systemjs/-/systemjs-6.10.2.tgz#c9870217bddf9cfd25d12d4fcd1989541ef1207c"
+  integrity sha512-PwaC0Z6Y1E6gFekY2u38EC5+5w2M65jYVrD1aAcOptpHVhCwPIwPFJvYJyryQKUyeuQ5bKKI3PBHWNjdE9aizg==
 
 table@^6.0.9, table@^6.6.0:
   version "6.7.1"
