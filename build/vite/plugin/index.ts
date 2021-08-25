@@ -6,6 +6,7 @@ import legacy from '@vitejs/plugin-legacy';
 import purgeIcons from 'vite-plugin-purge-icons';
 
 import { configHtmlPlugin } from './html';
+import { configMockPlugin } from './mock';
 import { configThemePlugin } from './theme';
 import { configSvgIconsPlugin } from './svgSprite';
 
@@ -33,6 +34,9 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
 
   // vite-plugin-svg-icons
   vitePlugins.push(configSvgIconsPlugin(isBuild));
+
+  // vite-plugin-mock
+  VITE_USE_MOCK && vitePlugins.push(configMockPlugin(isBuild));
 
   // vite-plugin-purge-icons
   vitePlugins.push(purgeIcons());
