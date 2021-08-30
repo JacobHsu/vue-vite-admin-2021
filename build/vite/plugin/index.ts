@@ -7,6 +7,7 @@ import purgeIcons from 'vite-plugin-purge-icons';
 
 import { configHtmlPlugin } from './html';
 import { configMockPlugin } from './mock';
+import { configStyleImportPlugin } from './styleImport';
 import { configThemePlugin } from './theme';
 import { configSvgIconsPlugin } from './svgSprite';
 
@@ -40,6 +41,9 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
 
   // vite-plugin-purge-icons
   vitePlugins.push(purgeIcons());
+
+  // vite-plugin-style-import
+  vitePlugins.push(configStyleImportPlugin(isBuild));
 
   //vite-plugin-theme
   vitePlugins.push(configThemePlugin(isBuild));
