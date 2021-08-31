@@ -9,6 +9,7 @@ import { configHtmlPlugin } from './html';
 import { configMockPlugin } from './mock';
 import { configStyleImportPlugin } from './styleImport';
 import { configThemePlugin } from './theme';
+import { configImageminPlugin } from './imagemin';
 import { configSvgIconsPlugin } from './svgSprite';
 
 export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
@@ -47,6 +48,12 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
 
   //vite-plugin-theme
   vitePlugins.push(configThemePlugin(isBuild));
+
+  // The following plugins only work in the production environment
+  if (isBuild) {
+    //vite-plugin-imagemin
+    VITE_USE_IMAGEMIN && vitePlugins.push(configImageminPlugin());
+  }
 
   return vitePlugins;
 }
