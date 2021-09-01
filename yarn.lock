@@ -1448,15 +1448,16 @@ bin-version@^3.0.0:
     execa "^1.0.0"
     find-versions "^3.0.0"
 
-bin-wrapper@^4.0.0, bin-wrapper@^4.0.1:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/bin-wrapper/-/bin-wrapper-4.1.0.tgz#99348f2cf85031e3ef7efce7e5300aeaae960605"
-  integrity sha512-hfRmo7hWIXPkbpi0ZltboCMVrU+0ClXR/JgbCKKjlDjQf6igXa7OwdqNcFWQZPZTgiY7ZpzE3+LjjkLiTN2T7Q==
+bin-wrapper@^4.0.0, bin-wrapper@^4.0.1, "bin-wrapper@npm:bin-wrapper-china":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/bin-wrapper-china/-/bin-wrapper-china-0.1.0.tgz#c2ec95b4d0eaef6ed5ad10954f9227d8e5ef3725"
+  integrity sha512-1UCm17WYEbgry50tup+AQN+JGVEVzoW4f8HMl899k1lvuFxWKGZXl/G2fgxQxAckRjnloO3ijLVVEsv8zescUg==
   dependencies:
     bin-check "^4.1.0"
     bin-version-check "^4.0.0"
+    binary-mirror-config "^1"
     download "^7.1.0"
-    import-lazy "^3.1.0"
+    import-lazy "^4.0.0"
     os-filter-obj "^2.0.0"
     pify "^4.0.1"
 
@@ -1464,6 +1465,11 @@ binary-extensions@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
   integrity sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
+
+binary-mirror-config@^1:
+  version "1.31.0"
+  resolved "https://registry.yarnpkg.com/binary-mirror-config/-/binary-mirror-config-1.31.0.tgz#65f363ac0ec6938efd9d2069fd2f25ad266f8379"
+  integrity sha512-TTaYfhKf+K3pv+sTSzBtvP1wKXrf4PCXHqlf09q4NK9bygl3ErHzziAvLeWkxCyuknfaj1v0D7S8Xg26mPdIXg==
 
 binary@~0.3.0:
   version "0.3.0"
@@ -4216,11 +4222,6 @@ import-from@^3.0.0:
   integrity sha512-CiuXOFFSzkU5x/CR0+z7T91Iht4CXgfCxVOFRhh2Zyhg5wOpWvvDLQUsWl+gcN+QscYBjez8hDCt85O7RLDttQ==
   dependencies:
     resolve-from "^5.0.0"
-
-import-lazy@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/import-lazy/-/import-lazy-3.1.0.tgz#891279202c8a2280fdbd6674dbd8da1a1dfc67cc"
-  integrity sha512-8/gvXvX2JMn0F+CDlSC4l6kOmVaLOO3XLkksI7CI3Ud95KDYJuYur2b9P/PUt/i/pDAMd/DulQsNbbbmRRsDIQ==
 
 import-lazy@^4.0.0:
   version "4.0.0"
@@ -7807,6 +7808,15 @@ vfile@^4.0.0:
     is-buffer "^2.0.0"
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
+
+vite-plugin-compression@^0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/vite-plugin-compression/-/vite-plugin-compression-0.3.5.tgz#1e5338eb43e60128de6d6f22b2aabf0e3dc0c17f"
+  integrity sha512-W+zKccNTDRYPsM6MzbVGTX2hvnsVrxKfmGD2Z23VgqinFKhtmwGzNNFsnbslXbeTGHXclaE7MO5nm7O1cNY3ZA==
+  dependencies:
+    chalk "^4.1.2"
+    debug "^4.3.2"
+    fs-extra "^10.0.0"
 
 vite-plugin-html@^2.0.7:
   version "2.0.7"
