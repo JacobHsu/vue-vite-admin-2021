@@ -6,6 +6,7 @@ import legacy from '@vitejs/plugin-legacy';
 import purgeIcons from 'vite-plugin-purge-icons';
 
 import { configHtmlPlugin } from './html';
+import { configPwaConfig } from './pwa';
 import { configMockPlugin } from './mock';
 import { configCompressPlugin } from './compress';
 import { configStyleImportPlugin } from './styleImport';
@@ -59,6 +60,9 @@ export function createVitePlugins(viteEnv: ViteEnv, isBuild: boolean) {
 
     //vite-plugin-imagemin
     VITE_USE_IMAGEMIN && vitePlugins.push(configImageminPlugin());
+
+    // vite-plugin-pwa
+    vitePlugins.push(configPwaConfig(viteEnv));
   }
 
   return vitePlugins;

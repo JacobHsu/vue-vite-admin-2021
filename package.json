@@ -68,6 +68,7 @@
     "vite-plugin-imagemin": "^0.4.5",
     "vite-plugin-mock": "^2.9.6",
     "vite-plugin-purge-icons": "^0.7.0",
+    "vite-plugin-pwa": "^0.11.2",
     "vite-plugin-style-import": "^1.2.1",
     "vite-plugin-svg-icons": "^1.0.3",
     "vite-plugin-theme": "^0.8.1",
