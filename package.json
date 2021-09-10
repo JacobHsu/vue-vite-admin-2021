@@ -7,7 +7,9 @@
     "serve": "vite preview",
     "clean:lib": "rimraf node_modules",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "report": "cross-env REPORT=true npm run build"
+    "report": "cross-env REPORT=true npm run build",
+    "test:gzip": "http-server dist --cors --gzip -c-1",
+    "test:br": "http-server dist --cors --brotli -c-1"
   },
   "dependencies": {
     "@iconify/iconify": "^2.0.3",

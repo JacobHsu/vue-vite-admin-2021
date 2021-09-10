@@ -41,6 +41,10 @@ Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
 4. Open the VSCode command palette
 5. Search and run "Select TypeScript version" -> "Use workspace version"
 
+### References
+
+[10+ Best CSS LOADER For Front-end Developers](https://dev.to/gscode/10-best-css-loader-for-front-end-developers-jk8)
+
 ### Better
 
 統一登入錯誤訊息，無論任何欄位錯誤皆顯示相同訊息。如: 帳號或密碼錯誤，避免攻擊者能藉由錯誤訊息進行暴力破解
