@@ -1,8 +1,14 @@
 <template>
   <Layout :class="prefixCls" v-bind="lockEvents">
-    Layout
     <LayoutFeatures />
     <LayoutHeader fixed v-if="getShowFullHeaderRef" />
+    <Layout :class="[layoutClass]">
+      <!-- <LayoutSideBar v-if="getShowSidebar || getIsMobile" /> -->
+      <Layout :class="`${prefixCls}-main`">
+         Layout-main
+        <LayoutFooter />
+      </Layout>
+    </Layout>
   </Layout>
 </template>
 
@@ -23,6 +29,7 @@
     name: 'DefaultLayout',
     components: {
       LayoutFeatures: createAsyncComponent(() => import('/@/layouts/default/feature/index.vue')),
+      LayoutFooter: createAsyncComponent(() => import('/@/layouts/default/footer/index.vue')),
       LayoutHeader,
       Layout,
     },
